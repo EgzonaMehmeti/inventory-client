@@ -1,0 +1,87 @@
+.product-table-container {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Search field */
+mat-form-field {
+  width: 300px;
+}
+
+/* Angular Material table custom look */
+table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header style */
+.mat-mdc-table thead tr th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+/* Remove the annoying grey background on rows */
+.mat-mdc-row {
+  background-color: #ffffff !important;
+}
+
+.mat-mdc-row:nth-child(even) {
+  background-color: #ffffff !important;
+}
+
+/* Hover effect */
+.mat-mdc-row:hover {
+  background-color: #eef5ff !important;
+  cursor: pointer;
+}
+
+/* Smooth hover transition */
+.mat-mdc-row,
+.mat-mdc-header-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Align paginator with table */
+.mat-mdc-paginator {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Add button styling */
+.button-add {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+  margin-bottom: 10px;
+
+  button {
+    background-color: #1976d2;
+    color: white;
+
+    &:hover {
+      background-color: #115293;
+    }
+  }
+}
+
+/* Icon size */
+.mat-icon.icon-add {
+  font-size: 36px;
+  height: 36px;
+  width: 36px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row-reverse;
+}
