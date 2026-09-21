@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Product } from "../../models/product";
 import { ProductService } from "../../services/product.service";
-import { CommonModule } from '@angular/common';
+
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
     templateUrl: 'products-list.component.html',
     standalone: true,
     styleUrls: ['./products-list.component.scss'],
-    imports: [CommonModule]
+    imports: []
 })
 export class ProductsListComponent implements OnInit {
 
