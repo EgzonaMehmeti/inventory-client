@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>{{ data?.title || 'Dialog Title' }}</h2>
+
+<mat-dialog-content class="dialog-content">
+  <p>{{ data?.message || 'Fill the data' }}</p>
+  <form [formGroup]="form">
+   <div>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Name</mat-label>
+        <input required matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price">
+    </mat-form-field>
+   </div>
+   <div>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Category</mat-label>
+        <input matInput formControlName="category">
+    </mat-form-field>
+   </div>
+   <div>
+    <mat-form-field appearance="outline" class="w-half">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-half">
+        <mat-label>QuantityInStock</mat-label>
+        <input matInput formControlName="quantityInStock">
+    </mat-form-field>
+   </div>
+   </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="primary">Cancel</button>
+  <button mat-button [disabled]="form.invalid" color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>
